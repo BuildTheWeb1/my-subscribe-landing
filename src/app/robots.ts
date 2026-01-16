@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://mysubscribe.app";
+  const baseUrl = "https://my-subscribe-landing.vercel.app/";
 
   return {
     rules: {

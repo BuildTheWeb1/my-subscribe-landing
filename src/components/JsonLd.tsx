@@ -15,8 +15,8 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "MySubscribe App",
-  url: "https://mysubscribe.app",
-  logo: "https://mysubscribe.app/assets/logo.png",
+  url: "https://my-subscribe-landing.vercel.app/",
+  logo: "https://my-subscribe-landing.vercel.app//assets/logo.png",
   description: "MySubscribe helps you track, manage, and optimize all your subscriptions in one beautiful iOS app.",
   sameAs: [],
 };
@@ -44,7 +44,7 @@ export const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "MySubscribe",
-  url: "https://mysubscribe.app",
+  url: "https://my-subscribe-landing.vercel.app/",
   description: "Track your subscriptions effortlessly with MySubscribe - the free, private iOS app for managing recurring expenses.",
   publisher: {
     "@type": "Organization",

@@ -5,7 +5,7 @@ import PhoneMockup from "./PhoneMockup";
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-20 px-6 overflow-hidden">
+    <section aria-labelledby="hero-heading" className="pt-32 pb-20 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -13,7 +13,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F1012] leading-tight mb-6">
+            <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F1012] leading-tight mb-6">
               Track Your
               <span className="bg-gradient-to-r from-[#007AFF] to-[#00D4FF] bg-clip-text text-transparent">
                 {" "}Subscriptions{" "}

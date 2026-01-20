@@ -43,7 +43,9 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="#download"
+              href="https://apps.apple.com/ro/app/my-subscribe/id6757849924"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#007AFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#0066DD] transition-colors"
             >
               Download App
@@ -81,7 +83,9 @@ export default function Header() {
                   </Link>
                 ))}
                 <a
-                  href="#download"
+                  href="https://apps.apple.com/ro/app/my-subscribe/id6757849924"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-[#007AFF] text-white px-6 py-3 rounded-full font-medium text-center hover:bg-[#0066DD] transition-colors"
                 >
                   Download App

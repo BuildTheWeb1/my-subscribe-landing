@@ -27,7 +27,9 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.a
-                href="#download"
+                href="https://apps.apple.com/ro/app/my-subscribe/id6757849924"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-[#007AFF] text-white px-8 py-4 rounded-full font-semibold text-center hover:bg-[#0066DD] transition-colors shadow-lg shadow-blue-500/25"

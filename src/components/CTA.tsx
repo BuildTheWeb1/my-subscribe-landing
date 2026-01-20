@@ -24,7 +24,9 @@ export default function CTA() {
               It&apos;s free, private, and beautifully simple.
             </p>
             <motion.a
-              href="#"
+              href="https://apps.apple.com/ro/app/my-subscribe/id6757849924"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 bg-white text-[#007AFF] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg"

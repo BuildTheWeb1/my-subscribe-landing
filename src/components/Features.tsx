@@ -21,6 +21,7 @@ const features = [
     title: "Payment Reminders",
     description: "Never miss a payment with timely notifications before your subscriptions renew.",
     color: "#FF2D55",
+    isComingSoon: true,
   },
   {
     icon: Smartphone,
@@ -93,11 +94,16 @@ export default function Features() {
               variants={itemVariants}
               className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow card-hover"
             >
-              <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-                style={{ backgroundColor: `${feature.color}15` }}
-              >
-                <feature.icon size={28} style={{ color: feature.color }} />
+              <div className="flex items-center justify-between mb-6">
+                <div
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center"
+                  style={{ backgroundColor: `${feature.color}15` }}
+                >
+                  <feature.icon size={28} style={{ color: feature.color }} />
+                </div>
+                {feature.isComingSoon && (
+                  <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">Coming Soon</span>
+                )}
               </div>
               <h3 className="text-xl font-semibold text-[#0F1012] mb-3">
                 {feature.title}

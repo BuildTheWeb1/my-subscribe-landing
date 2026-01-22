@@ -46,9 +46,14 @@ export default function Header() {
               href="https://apps.apple.com/ro/app/my-subscribe/id6757849924"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#007AFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#0066DD] transition-colors"
+              className="transition-opacity hover:opacity-80"
             >
-              Download App
+              <Image
+                src="/assets/Download_on_the_App_Store_Badge_US.svg"
+                alt="Download on the App Store"
+                width={120}
+                height={40}
+              />
             </a>
           </div>
 
@@ -86,9 +91,14 @@ export default function Header() {
                   href="https://apps.apple.com/ro/app/my-subscribe/id6757849924"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#007AFF] text-white px-6 py-3 rounded-full font-medium text-center hover:bg-[#0066DD] transition-colors"
+                  className="transition-opacity hover:opacity-80 flex justify-center"
                 >
-                  Download App
+                  <Image
+                    src="/assets/Download_on_the_App_Store_Badge_US.svg"
+                    alt="Download on the App Store"
+                    width={140}
+                    height={47}
+                  />
                 </a>
               </div>
             </motion.div>

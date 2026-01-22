@@ -25,17 +25,21 @@ export default function Hero() {
               track, manage, and optimize all your subscriptions in one
               beautiful app.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <motion.a
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
+              {/* <motion.a
                 href="https://apps.apple.com/ro/app/my-subscribe/id6757849924"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#007AFF] text-white px-8 py-4 rounded-full font-semibold text-center hover:bg-[#0066DD] transition-colors shadow-lg shadow-blue-500/25"
               >
-                Download for iOS
-              </motion.a>
+                <NextImage
+                  src="/assets/Download_on_the_App_Store_Badge_US.svg"
+                  alt="Download on the App Store"
+                  width={160}
+                  height={53}
+                />
+              </motion.a> */}
               <motion.a
                 href="#features"
                 whileHover={{ scale: 1.05 }}

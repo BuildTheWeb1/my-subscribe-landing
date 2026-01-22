@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Apple } from "lucide-react";
 
 export default function CTA() {
   return (
@@ -29,10 +29,14 @@ export default function CTA() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-3 bg-white text-[#007AFF] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+              className="inline-block"
             >
-              <Apple size={24} />
-              Download on App Store
+              <Image
+                src="/assets/Download_on_the_App_Store_Badge_US.svg"
+                alt="Download on the App Store"
+                width={180}
+                height={60}
+              />
             </motion.a>
           </div>
         </motion.div>

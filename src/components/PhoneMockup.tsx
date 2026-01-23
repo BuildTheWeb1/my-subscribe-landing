@@ -9,9 +9,9 @@ interface PhoneMockupProps {
 
 const screenshotMap: Record<PhoneMockupProps["type"], string> = {
   home: "/assets/screen-home-empty.png",
-  "home-filled": "/assets/screen-home.png",
+  "home-filled": "/assets/screen-home-new.png",
   add: "/assets/screen-add-subscription.png",
-  details: "/assets/screen-edit-subscription.png",
+  details: "/assets/screen-insights.png",
 };
 
 export default function PhoneMockup({ type, size = "small" }: PhoneMockupProps) {

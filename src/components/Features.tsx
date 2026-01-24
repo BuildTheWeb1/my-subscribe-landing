@@ -6,14 +6,14 @@ import { CreditCard, PieChart, Bell, Smartphone, Shield, Zap } from "lucide-reac
 const features = [
   {
     icon: CreditCard,
-    title: "Track All Subscriptions",
+    title: "One place for everything",
     description: "Add and manage all your recurring subscriptions in one place with a beautiful card-based interface.",
     color: "#007AFF",
   },
   {
     icon: PieChart,
-    title: "Monthly Overview",
-    description: "See your total monthly and yearly spending at a glance with clear, prominent displays.",
+    title: "Clear Overview",
+    description: "Instantly see how much you’re spending each month and each year across all subscriptions.",
     color: "#34C759",
   },
   {
@@ -73,11 +73,16 @@ export default function Features() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1012] mb-4">
-            Everything You Need
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1012] mb-6">
+            All Your Subscriptions, Finally Organized
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Simple yet powerful features to help you take control of your subscriptions
+            <span className="font-bold">
+                {" "}My Subscribe{" "}
+              </span> is built to answer a few simple questions:
+          </p>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            What am I paying for? How much is it every month? And is it still worth it?
           </p>
         </motion.div>
 

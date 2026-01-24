@@ -17,10 +17,12 @@ export default function CTA() {
           <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10" />
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Take Control?
+              Stop Guessing. Start Knowing.
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
-              Download MySubscribe today and start tracking your subscriptions.
+              Download <span className="font-bold">
+                {" "}My Subscribe{" "}
+              </span> today and start tracking your subscriptions.
               It&apos;s free, private, and beautifully simple.
             </p>
             <motion.a

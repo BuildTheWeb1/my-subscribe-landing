@@ -14,16 +14,14 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
           >
             <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F1012] leading-tight mb-6">
-              Track Your
+              See What Your
               <span className="bg-gradient-to-r from-[#007AFF] to-[#00D4FF] bg-clip-text text-transparent">
                 {" "}Subscriptions{" "}
               </span>
-              Effortlessly
+              Really Cost You
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
-              Take control of your recurring expenses. MySubscribe helps you
-              track, manage, and optimize all your subscriptions in one
-              beautiful app.
+              A simple iOS app that keeps all your subscriptions in one place and shows you exactly how much they cost each month, each year, and since the day you signed up. No accounts, no spreadsheets, just a clear view of where your money goes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               {/* <motion.a

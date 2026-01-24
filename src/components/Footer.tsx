@@ -19,8 +19,7 @@ export default function Footer() {
               <span className="font-bold text-xl">MySubscribe</span>
             </div>
             <p className="text-gray-400 max-w-sm">
-              Take control of your subscriptions. Track, manage, and save money
-              with the simplest subscription tracker for iOS.
+              Track every active subscription, from Netflix to niche apps, with an easy card-style layout. See your total monthly and yearly spend at a glance, plus how much you’ve paid in total for each service over time.
             </p>
           </div>
 

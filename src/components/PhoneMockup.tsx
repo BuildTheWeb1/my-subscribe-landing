@@ -14,6 +14,13 @@ const screenshotMap: Record<PhoneMockupProps["type"], string> = {
   details: "/assets/screen-insights.png",
 };
 
+const altTextMap: Record<PhoneMockupProps["type"], string> = {
+  home: "MySubscribe iOS app empty home screen showing subscription tracker interface",
+  "home-filled": "MySubscribe subscription tracker displaying multiple active subscriptions with monthly costs",
+  add: "Add new subscription screen in MySubscribe iOS app with category selection",
+  details: "Subscription insights and cost breakdown view in MySubscribe app",
+};
+
 export default function PhoneMockup({ type, size = "small" }: PhoneMockupProps) {
   const sizeClasses = size === "large" 
     ? "w-[280px] h-[560px] md:w-[320px] md:h-[640px]" 
@@ -26,7 +33,7 @@ export default function PhoneMockup({ type, size = "small" }: PhoneMockupProps) 
         <div className="bg-white rounded-[2rem] h-full overflow-hidden relative">
           <Image
             src={screenshotMap[type]}
-            alt={`MySubscribe ${type} screen`}
+            alt={altTextMap[type]}
             fill
             className="object-cover object-top"
             sizes="(max-width: 768px) 220px, 320px"

@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "MySubscribe Privacy Policy - Learn how we protect your data. All subscription data is stored locally on your device with no cloud sync or external data storage.",
   alternates: {
-    canonical: "https://my-subscribe-landing.vercel.app//privacy",
+    canonical: "https://my-subscribe.app/privacy",
   },
   openGraph: {
     title: "Privacy Policy - MySubscribe",
     description: "Learn how MySubscribe protects your data. All subscription data is stored locally on your device.",
-    url: "https://my-subscribe-landing.vercel.app//privacy",
+    url: "https://my-subscribe.app/privacy",
   },
 };
 

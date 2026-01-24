@@ -15,16 +15,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://my-subscribe-landing.vercel.app/";
+const siteUrl = "https://my-subscribe.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "MySubscribe - Track Your Subscriptions Effortlessly",
+    default: "MySubscribe - iOS Subscription Tracker App | Manage Recurring Expenses",
     template: "%s | MySubscribe",
   },
-  description: "Take control of your recurring expenses. MySubscribe helps you track, manage, and optimize all your subscriptions in one beautiful iOS app. Free, private, and simple.",
-  keywords: ["subscription tracker", "subscription manager", "iOS app", "expense tracker", "recurring payments", "budget app", "subscription management"],
+  description: "Track all your subscriptions in one place. MySubscribe is a free, privacy-first iOS app that shows exactly what you're paying for monthly and yearly. No accounts needed. Download now.",
+  keywords: ["subscription tracker", "subscription manager", "iOS subscription app", "track subscriptions", "recurring payments tracker", "subscription cost calculator", "manage subscriptions iPhone", "subscription organizer", "monthly subscription tracker", "subscription budget app"],
   authors: [{ name: "MySubscribe App" }],
   creator: "MySubscribe App",
   publisher: "MySubscribe App",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "MySubscribe",
-    title: "MySubscribe - Track Your Subscriptions Effortlessly",
-    description: "Take control of your recurring expenses. MySubscribe helps you track, manage, and optimize all your subscriptions in one beautiful iOS app.",
+    title: "MySubscribe - iOS Subscription Tracker | See What You Really Pay",
+    description: "Free iOS app that tracks all your subscriptions in one place. See monthly and yearly costs instantly. Privacy-first, no accounts. Download on App Store.",
     images: [
       {
         url: "/assets/og-image.png",
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MySubscribe - Track Your Subscriptions Effortlessly",
-    description: "Take control of your recurring expenses. MySubscribe helps you track, manage, and optimize all your subscriptions in one beautiful iOS app.",
+    title: "MySubscribe - iOS Subscription Tracker | See What You Really Pay",
+    description: "Free iOS app that tracks all your subscriptions in one place. See monthly and yearly costs instantly. Privacy-first, no accounts. Download on App Store.",
     images: ["/assets/og-image.png"],
   },
   alternates: {

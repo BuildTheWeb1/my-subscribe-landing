@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "FAQ - Frequently Asked Questions",
   description: "Find answers to common questions about MySubscribe - the free iOS subscription tracker app. Learn about features, privacy, data security, and more.",
   alternates: {
-    canonical: "https://my-subscribe-landing.vercel.app//faq",
+    canonical: "https://my-subscribe.app/faq",
   },
   openGraph: {
     title: "FAQ - MySubscribe",
     description: "Find answers to common questions about MySubscribe - the free iOS subscription tracker app.",
-    url: "https://my-subscribe-landing.vercel.app//faq",
+    url: "https://my-subscribe.app/faq",
   },
 };
 

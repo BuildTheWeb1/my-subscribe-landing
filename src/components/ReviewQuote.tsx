@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 // TODO: Replace with real App Store review text before launch
 // Retrieve from App Store Connect > Reviews
 const review = {
-  text: "Finally an app that shows me exactly what I'm spending on subscriptions. Simple, clean, and does exactly what it promises.",
+  text: "A very intuitive app that helps me keep track of all my subscriptions. I love it.",
   attribution: "Verified App Store Review",
 };
 

@@ -32,13 +32,13 @@ const features = [
     icon: Shield,
     title: "Privacy First",
     description: "Your data stays on your device. No accounts, no cloud sync, complete privacy.",
-    color: "#2B3744",
+    color: "#60B4FF",
   },
   {
     icon: TrendingUp,
     title: "Paid So Far",
-    description: "See the total you’ve paid each service since day one — not just the monthly rate. A reality check that makes you think twice about keeping subscriptions you forgot about.",
-    color: "#C96F5E",
+    description: "See the total you’ve paid each service since day one — not just the monthly rate. A reality check that makes you think twice.",
+    color: "#E07868",
   },
 ];
 
@@ -46,9 +46,7 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
+    transition: { staggerChildren: 0.1 },
   },
 };
 
@@ -63,7 +61,7 @@ const itemVariants = {
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 px-6 bg-[#F8FAFC]">
+    <section id="features" className="py-24 px-6 bg-[#0D0D14]">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -72,15 +70,13 @@ export default function Features() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1012] mb-6">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6 tracking-tight">
             All Your Subscriptions, Finally Organized
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            <span className="font-bold">
-                {" "}My Subscribe{" "}
-              </span> is built to answer a few simple questions:
+          <p className="text-white/45 max-w-2xl mx-auto text-lg">
+            <span className="font-bold text-white/70">My Subscribe</span> is built to answer a few simple questions:
           </p>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-white/45 max-w-2xl mx-auto text-lg">
             What am I paying for? How much is it every month? And is it still worth it?
           </p>
         </motion.div>
@@ -90,29 +86,26 @@ export default function Features() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {features.map((feature) => (
             <motion.div
               key={feature.title}
               variants={itemVariants}
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow card-hover"
+              className="bg-white/[0.03] border border-white/[0.07] p-8 rounded-2xl card-hover hover:bg-white/[0.05] hover:border-white/[0.12] transition-colors"
             >
               <div className="flex items-center justify-between mb-6">
                 <div
                   className="w-14 h-14 rounded-2xl flex items-center justify-center"
-                  style={{ backgroundColor: `${feature.color}15` }}
+                  style={{ backgroundColor: `${feature.color}20` }}
                 >
                   <feature.icon size={28} style={{ color: feature.color }} />
                 </div>
-                {feature.isComingSoon && (
-                  <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">Coming Soon</span>
-                )}
               </div>
-              <h3 className="text-xl font-semibold text-[#0F1012] mb-3">
+              <h3 className="text-xl font-semibold text-white mb-3">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-white/40 leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>

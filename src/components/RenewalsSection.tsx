@@ -32,9 +32,7 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
+    transition: { staggerChildren: 0.1 },
   },
 };
 
@@ -49,7 +47,7 @@ const itemVariants = {
 
 export default function RenewalsSection() {
   return (
-    <section className="py-24 px-6 bg-white">
+    <section className="py-24 px-6 bg-[#0D0D14]">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,10 +56,10 @@ export default function RenewalsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1012] mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
             Never Miss a Renewal
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-white/45 max-w-2xl mx-auto text-lg">
             A built-in calendar shows every renewal date at a glance. The 30-day upcoming list keeps the next payments front and center.
           </p>
         </motion.div>
@@ -82,15 +80,15 @@ export default function RenewalsSection() {
               >
                 <div
                   className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0"
-                  style={{ backgroundColor: `${row.color}15` }}
+                  style={{ backgroundColor: `${row.color}20` }}
                 >
                   <row.icon size={24} style={{ color: row.color }} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#0F1012] mb-2">
+                  <h3 className="text-xl font-semibold text-white mb-2">
                     {row.title}
                   </h3>
-                  <p className="text-gray-600">{row.description}</p>
+                  <p className="text-white/40 leading-relaxed">{row.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -106,6 +104,24 @@ export default function RenewalsSection() {
             <PhoneMockup type="renewal" size="large" />
           </motion.div>
         </div>
+
+        {/* Mid-page CTA nudge */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+          className="border-t border-white/[0.05] mt-16 pt-8 text-center"
+        >
+          <a
+            href="https://apps.apple.com/app/my-subscribe/id6757849924"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#007AFF] font-semibold text-sm hover:text-[#60B4FF] transition-colors underline underline-offset-4 decoration-[#007AFF]/30"
+          >
+            Get the app free →
+          </a>
+        </motion.div>
       </div>
     </section>
   );

@@ -5,25 +5,28 @@ import { motion } from "framer-motion";
 
 export default function CTA() {
   return (
-    <section id="download" className="py-24 px-6">
+    <section id="download" className="py-24 px-6 bg-[#0A0A0F]">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="hero-gradient rounded-3xl p-12 md:p-16 text-center text-white relative overflow-hidden"
+          className="rounded-3xl p-12 md:p-16 text-center text-white relative overflow-hidden border border-[rgba(0,122,255,0.15)]"
+          style={{
+            background: "linear-gradient(135deg, #071428 0%, #0A0A0F 100%)",
+            boxShadow: "0 0 60px rgba(0, 122, 255, 0.08)",
+          }}
         >
-          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5" />
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-4">
               Stop Guessing. Start Knowing.
             </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
-              Download <span className="font-bold">
-                {" "}My Subscribe{" "}
-              </span> today and start tracking your subscriptions.
-              It&apos;s free, private, and beautifully simple.
+            <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto">
+              Download{" "}
+              <span className="font-bold text-white">My Subscribe</span>{" "}
+              today. Free · Private · Beautifully Simple.
             </p>
             <motion.a
               href="https://apps.apple.com/app/my-subscribe/id6757849924"

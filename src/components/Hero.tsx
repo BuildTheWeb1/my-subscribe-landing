@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import PhoneMockup from "./PhoneMockup";
 
@@ -24,20 +25,20 @@ export default function Hero() {
               A simple iOS app that keeps all your subscriptions in one place and shows you exactly how much they cost each month, each year, and since the day you signed up. No accounts, no spreadsheets, just a clear view of where your money goes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start">
-              {/* <motion.a
-                href="https://apps.apple.com/ro/app/my-subscribe/id6757849924"
+              <motion.a
+                href="https://apps.apple.com/app/my-subscribe/id6757849924"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <NextImage
+                <Image
                   src="/assets/Download_on_the_App_Store_Badge_US.svg"
                   alt="Download on the App Store"
                   width={160}
                   height={53}
                 />
-              </motion.a> */}
+              </motion.a>
               <motion.a
                 href="#features"
                 whileHover={{ scale: 1.05 }}

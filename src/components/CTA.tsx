@@ -26,7 +26,7 @@ export default function CTA() {
               It&apos;s free, private, and beautifully simple.
             </p>
             <motion.a
-              href="https://apps.apple.com/ro/app/my-subscribe/id6757849924"
+              href="https://apps.apple.com/app/my-subscribe/id6757849924"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

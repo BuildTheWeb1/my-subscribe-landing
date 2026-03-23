@@ -43,7 +43,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="https://apps.apple.com/ro/app/my-subscribe/id6757849924"
+              href="https://apps.apple.com/app/my-subscribe/id6757849924"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
@@ -88,7 +88,7 @@ export default function Header() {
                   </Link>
                 ))}
                 <a
-                  href="https://apps.apple.com/ro/app/my-subscribe/id6757849924"
+                  href="https://apps.apple.com/app/my-subscribe/id6757849924"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-opacity hover:opacity-80 flex justify-center"

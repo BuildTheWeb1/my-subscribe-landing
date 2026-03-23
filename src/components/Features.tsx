@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CreditCard, PieChart, Bell, Smartphone, Shield, Zap } from "lucide-react";
+import { CreditCard, PieChart, Calendar, LayoutGrid, Shield, TrendingUp } from "lucide-react";
 
 const features = [
   {
@@ -13,21 +13,20 @@ const features = [
   {
     icon: PieChart,
     title: "Clear Overview",
-    description: "Instantly see how much you’re spending each month and each year across all subscriptions.",
+    description: "Instantly see how much you’re spending each month and each year across all subscriptions. Switch display currency with a tap.",
     color: "#34C759",
   },
   {
-    icon: Bell,
-    title: "Payment Reminders",
-    description: "Never miss a payment with timely notifications before your subscriptions renew.",
+    icon: Calendar,
+    title: "Renewal Calendar",
+    description: "See exactly what renews and when. Browse a monthly calendar and get a 30-day ahead view of upcoming payments so nothing sneaks up on you.",
     color: "#FF2D55",
-    isComingSoon: true,
   },
   {
-    icon: Smartphone,
-    title: "Native iOS Experience",
-    description: "Built with SwiftUI for a smooth, native experience that feels right at home on your iPhone.",
-    color: "#007AFF",
+    icon: LayoutGrid,
+    title: "Home Screen Widget",
+    description: "Add a widget to your Home Screen for an at-a-glance view of your monthly total, subscription count, and next renewals — without opening the app.",
+    color: "#34C759",
   },
   {
     icon: Shield,
@@ -36,9 +35,9 @@ const features = [
     color: "#2B3744",
   },
   {
-    icon: Zap,
-    title: "Quick Add",
-    description: "Add new subscriptions in seconds with our streamlined form and category presets.",
+    icon: TrendingUp,
+    title: "Paid So Far",
+    description: "See the total you’ve paid each service since day one — not just the monthly rate. A reality check that makes you think twice about keeping subscriptions you forgot about.",
     color: "#C96F5E",
   },
 ];

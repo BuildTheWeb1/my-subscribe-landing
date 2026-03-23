@@ -47,6 +47,31 @@ const faqs = [
       "Yes! You can add subscriptions with either monthly or yearly billing cycles. The app automatically calculates and displays both your monthly spending and yearly projections.",
   },
   {
+    question: "How do I know what renews soon?",
+    answer:
+      "MySubscribe includes a renewal calendar that shows you which subscriptions renew on any given day. There's also a dedicated upcoming renewals list that shows everything due in the next 30 days, sorted by date, so you always know what's coming.",
+  },
+  {
+    question: "Is there a Home Screen widget?",
+    answer:
+      "Yes! MySubscribe includes Home Screen widgets in small, medium, and large sizes. They show your monthly total, subscription count, and upcoming renewals at a glance — no need to open the app.",
+  },
+  {
+    question: "Can I display costs in my local currency?",
+    answer:
+      "Yes. MySubscribe supports display currency conversion. You can pick any currency from Settings and the app will show all your costs converted using current exchange rates, refreshed automatically.",
+  },
+  {
+    question: "Can I lock the app with Face ID or Touch ID?",
+    answer:
+      "Yes. You can enable biometric lock in Settings > Security. Once enabled, the app requires Face ID, Touch ID, or Optic ID (depending on your device) each time you open it after backgrounding.",
+  },
+  {
+    question: "Do I have to enter every subscription manually?",
+    answer:
+      "No. MySubscribe includes a curated service catalog with popular streaming, software, fitness, and other apps pre-loaded. Just pick a service from the catalog and the details are filled in for you — you only need to confirm the amount and billing cycle.",
+  },
+  {
     question: "How do I delete a subscription?",
     answer:
       "You can delete a subscription by tapping on it to view the details, then using the delete option. You can also swipe to delete from the main list view.",

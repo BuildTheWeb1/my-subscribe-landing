@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     description: "Free iOS app that tracks all your subscriptions in one place. See monthly and yearly costs instantly. Privacy-first, no accounts. Download on App Store.",
     images: [
       {
-        url: "/assets/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "/assets/logo.png",
+        width: 512,
+        height: 512,
         alt: "MySubscribe - Subscription Tracker App",
       },
     ],
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MySubscribe - iOS Subscription Tracker | See What You Really Pay",
     description: "Free iOS app that tracks all your subscriptions in one place. See monthly and yearly costs instantly. Privacy-first, no accounts. Download on App Store.",
-    images: ["/assets/og-image.png"],
+    images: ["/assets/logo.png"],
   },
   alternates: {
     canonical: siteUrl,

@@ -3,15 +3,16 @@
 import Image from "next/image";
 
 interface PhoneMockupProps {
-  type: "home" | "home-filled" | "add" | "details";
+  type: "home" | "home-filled" | "add" | "details" | "renewal";
   size?: "small" | "large";
 }
 
 const screenshotMap: Record<PhoneMockupProps["type"], string> = {
   home: "/assets/screen-home-empty.png",
-  "home-filled": "/assets/screen-home-new.png",
+  "home-filled": "/assets/screen-home.png",
   add: "/assets/screen-add-subscription.png",
   details: "/assets/screen-insights.png",
+  renewal: "/assets/screen-renewal.png",
 };
 
 const altTextMap: Record<PhoneMockupProps["type"], string> = {
@@ -19,6 +20,7 @@ const altTextMap: Record<PhoneMockupProps["type"], string> = {
   "home-filled": "MySubscribe subscription tracker displaying multiple active subscriptions with monthly costs",
   add: "Add new subscription screen in MySubscribe iOS app with category selection",
   details: "Subscription insights and cost breakdown view in MySubscribe app",
+  renewal: "Subscription renewals calendar view in MySubscribe app showing monthly and yearly subscriptions",
 };
 
 export default function PhoneMockup({ type, size = "small" }: PhoneMockupProps) {

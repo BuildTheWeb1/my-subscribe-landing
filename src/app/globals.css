@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0F1012;
-  
+  --background: #0A0A0F;
+  --foreground: #FFFFFF;
+
   /* MySubscribe Theme Colors */
   --primary-blue: #007AFF;
   --primary-blue-light: #00D4FF;
@@ -12,7 +12,7 @@
   --mint: #DDF7F6;
   --light-blue: #CCEAF7;
   --dark: #0F1012;
-  --coral: #C96F5E;
+  --coral: #E07868;
   --dark-blue-gray: #2B3744;
 }
 
@@ -43,11 +43,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom gradient for hero */
-.hero-gradient {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
-}
-
 /* Card hover effects */
 .card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -55,5 +50,5 @@ html {
 
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 122, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
 }

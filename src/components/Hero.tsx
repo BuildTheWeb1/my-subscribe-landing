@@ -52,7 +52,7 @@ export default function Hero() {
                   🔒 No Account
                 </span>
                 <span className="bg-[rgba(52,199,89,0.12)] border border-[rgba(52,199,89,0.2)] text-[#4ADE80] text-xs font-semibold px-3 py-1 rounded-full">
-                  ✓ Free Forever
+                  ✓ Free
                 </span>
                 <span className="bg-white/[0.06] border border-white/10 text-white/50 text-xs font-semibold px-3 py-1 rounded-full">
                   📱 On-Device

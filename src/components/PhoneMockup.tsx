@@ -30,8 +30,9 @@ export default function PhoneMockup({ type, size = "small" }: PhoneMockupProps) 
 
   return (
     <div className={`relative ${sizeClasses}`}>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#007AFF] to-[#00D4FF] rounded-[3rem] blur-3xl opacity-20" />
-      <div className="relative bg-gray-900 rounded-[2.5rem] shadow-2xl overflow-hidden h-full p-2">
+      <div className="absolute inset-[-8px] bg-gradient-to-br from-[#007AFF] to-[#00D4FF] rounded-[3.5rem] blur-3xl opacity-40" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#007AFF]/20 to-[#00D4FF]/10 rounded-[3rem] blur-xl opacity-60" />
+      <div className="relative bg-[#1a1a2e] rounded-[2.5rem] shadow-2xl overflow-hidden h-full p-2 ring-1 ring-[#007AFF]/30">
         <div className="bg-white rounded-[2rem] h-full overflow-hidden relative">
           <Image
             src={screenshotMap[type]}

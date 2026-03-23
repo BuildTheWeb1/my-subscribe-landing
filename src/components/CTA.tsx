@@ -18,7 +18,6 @@ export default function CTA() {
             boxShadow: "0 0 60px rgba(0, 122, 255, 0.08)",
           }}
         >
-          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5" />
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-4">
               Stop Guessing. Start Knowing.

@@ -78,7 +78,6 @@ export default function Hero() {
               </motion.a>
               <motion.a
                 href="#features"
-                whileHover={{ opacity: 0.7 }}
                 className="text-sm text-white/40 underline underline-offset-4 decoration-white/20 hover:text-white/60 transition-colors"
               >
                 See how it works ↓

@@ -111,7 +111,7 @@ Color: `rgba(255,255,255,0.5)`
 - Primary: App Store badge (unchanged asset)
 - Secondary: text link "See how it works ↓" — replaces "Learn More" button. `color: rgba(255,255,255,0.4)`, underline on hover
 
-**Background:** `linear-gradient(160deg, #0A0A0F 0%, #0C1220 50%, #0A0A0F 100%)`
+**Background:** Apply `background: linear-gradient(160deg, #0A0A0F 0%, #0C1220 50%, #0A0A0F 100%)` directly on the `<section>` element in `Hero.tsx`. The section currently has no background set and inherits from the page body — this gradient must be explicit on the section tag so it renders correctly beneath the fixed header overlap.
 
 ### 3. Features Grid
 
@@ -133,7 +133,7 @@ Color: `rgba(255,255,255,0.5)`
 
 **Layout:** Two-column on desktop (text left, phone right showing the details/insights screen). Single column stacked on mobile.
 
-**Eyebrow label:** `"NEW PERSPECTIVE"` in warm coral (`#E07868`) on a low-opacity coral background pill.
+**Eyebrow label:** `"NEW PERSPECTIVE"` in warm coral (`#E07868`) on `rgba(232,120,104,0.12)` background pill with `border: 1px solid rgba(232,120,104,0.2)`.
 
 **Headline:**
 > "The Total You've Paid. Since Day One."
@@ -143,11 +143,13 @@ Color: `rgba(255,255,255,0.5)`
 > "$9.99/month sounds small until you see $239 paid for a streaming service you open twice a year. MySubscribe shows you that number for every subscription you track."
 
 **Stat card** (illustrative, not real user data):
-- Background: `rgba(201,111,94,0.08)`, border: `rgba(201,111,94,0.15)`
-- Shows a sample subscription with a "total paid" figure in large warm coral text
+- Background: `rgba(232,120,104,0.08)`, border: `1px solid rgba(232,120,104,0.15)`
+- Large total figure in `#E07868` (accent-warm — consistent with all other coral usages in this section)
 - Label: "Example · Streaming Service" to be honest about it being illustrative
 
-**Phone mockup:** Uses existing `PhoneMockup type="details"` component (the "Detailed Insights" screen already in the codebase).
+**Phone mockup:** Uses existing `PhoneMockup type="details"` component (`screen-insights.png`). Before implementation, verify that `screen-insights.png` displays the subscription detail/paid-so-far view. If the screen does not show a prominent total-paid figure, a new image asset will be needed — raise with the designer before building.
+
+**Mobile layout:** Single column. Text block appears first (top), phone mockup below. Consistent with `RenewalsSection` and `Hero` mobile stacking convention.
 
 **Background:** `#0A0A0F`
 
@@ -188,7 +190,11 @@ Color: `rgba(255,255,255,0.5)`
 
 **Background:** `#0D0D14`
 
-**Note:** The actual review text must be the real App Store review copy. Placeholder in spec.
+**Review copy placeholder** (replace with real App Store review text before launch):
+> "Finally an app that shows me exactly what I'm spending on subscriptions. Simple, clean, and does exactly what it promises."
+> — Verified App Store Review
+
+**Delivery note:** The real review text must be retrieved from App Store Connect before this component ships. The placeholder above is representative only.
 
 ### 8. Inline FAQ (New Section)
 
@@ -201,6 +207,8 @@ Color: `rgba(255,255,255,0.5)`
 3. "Do I have to enter subscriptions manually?" — Yes, but it takes seconds per subscription and you only do it once.
 
 **"See all FAQs →"** link below, pointing to `/faq`.
+
+**Layout:** `max-width: 768px`, centered (`mx-auto`). Narrower than the standard `max-w-6xl` sections — matches the CTA section's tighter focus and improves readability for Q&A text.
 
 **Styling:**
 - Background: `#0A0A0F`
@@ -225,14 +233,14 @@ Color: `rgba(255,255,255,0.5)`
 
 ### globals.css
 
-- Set `body` background to `#0A0A0F` (prevents flash of white on load)
-- Remove or override the `.hero-gradient` class which currently targets the CTA section — replaced by the new dark gradient
-- Retain `card-hover` class but update to dark-mode values: `box-shadow` uses `rgba(255,255,255,0.05)` instead of the current light shadow
+- Change the `--background` CSS variable in `:root` from `#ffffff` to `#0A0A0F`. Do not only update `body { background }` — Tailwind's `bg-background` token derives from this variable and will flash white if only the body rule is patched.
+- Remove the `.hero-gradient` CSS class entirely. Also update `CTA.tsx` to replace the `hero-gradient` className on the card `<div>` with an inline `style` or equivalent Tailwind classes for the new dark gradient — do not leave a dangling class reference.
+- Update `card-hover` to dark-mode hover values: retain the existing `transform: translateY(-4px)` lift, update `box-shadow` to `0 8px 24px rgba(255,255,255,0.05)`. Do NOT use `card-hover` for the Features card background change on hover — apply `hover:bg-[rgba(255,255,255,0.05)]` and `hover:border-[rgba(255,255,255,0.12)]` as Tailwind utilities directly on the Features card element.
 
 ### layout.tsx
 
-- Update `<html>` background color meta if present
-- No structural changes needed
+- Add `<meta name="theme-color" content="#0A0A0F" />` inside `<head>` to prevent the browser chrome appearing white on iOS Safari.
+- No other structural changes needed.
 
 ---
 

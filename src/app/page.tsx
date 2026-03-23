@@ -1,8 +1,10 @@
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
-import Screenshots from "@/components/Screenshots";
+import PaidSoFarSection from "@/components/PaidSoFarSection";
 import RenewalsSection from "@/components/RenewalsSection";
 import WidgetSection from "@/components/WidgetSection";
+import ReviewQuote from "@/components/ReviewQuote";
+import InlineFAQ from "@/components/InlineFAQ";
 import CTA from "@/components/CTA";
 import JsonLd, { softwareApplicationSchema, webSiteSchema, organizationSchema } from "@/components/JsonLd";
 
@@ -14,9 +16,11 @@ export default function Home() {
       <JsonLd data={softwareApplicationSchema} />
       <Hero />
       <Features />
-      <Screenshots />
+      <PaidSoFarSection />
       <RenewalsSection />
       <WidgetSection />
+      <ReviewQuote />
+      <InlineFAQ />
       <CTA />
     </>
   );

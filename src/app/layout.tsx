@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
@@ -65,6 +65,10 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   category: "Finance",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0A0A0F",
 };
 
 export default function RootLayout({

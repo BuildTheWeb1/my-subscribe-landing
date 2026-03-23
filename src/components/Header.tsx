@@ -28,7 +28,7 @@ export default function Header() {
               className="rounded-full"
               priority
             />
-            <span className="font-bold text-xl text-white">MySubscribe</span>
+            <span className="hidden sm:block font-bold text-xl text-white">MySubscribe</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -63,7 +63,7 @@ export default function Header() {
               href="https://apps.apple.com/app/my-subscribe/id6757849924"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-[#007AFF] to-[#0060DD] text-white text-xs font-bold px-4 py-2 rounded-full shadow-[0_0_10px_rgba(0,122,255,0.35)] hover:opacity-90 transition-opacity"
+              className="whitespace-nowrap bg-gradient-to-r from-[#007AFF] to-[#0060DD] text-white text-xs font-bold px-4 py-2 rounded-full shadow-[0_0_10px_rgba(0,122,255,0.35)] hover:opacity-90 transition-opacity"
             >
               Get App
             </a>

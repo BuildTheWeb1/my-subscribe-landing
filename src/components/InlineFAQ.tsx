@@ -13,8 +13,8 @@ const questions = [
     a: "100%. Everything stays on your device. No accounts, no cloud sync, no data collection whatsoever.",
   },
   {
-    q: "Do I have to enter subscriptions manually?",
-    a: "Yes — but it takes seconds per subscription and you only do it once. No bank connections, no automatic scanning.",
+    q: "Do I have to enter every subscription manually?",
+    a: "Not all of them. MySubscribe includes a curated service catalog with popular apps pre-loaded — just pick and confirm. For anything not in the catalog, manual entry takes seconds and you only do it once.",
   },
 ];
 

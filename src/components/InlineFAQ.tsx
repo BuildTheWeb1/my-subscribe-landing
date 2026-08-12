@@ -49,7 +49,7 @@ export default function InlineFAQ() {
               <h3 className="text-base font-semibold text-white mb-2">
                 {item.q}
               </h3>
-              <p className="text-white/45 leading-relaxed">{item.a}</p>
+              <p className="text-white/45 leading-relaxed max-w-[65ch]">{item.a}</p>
             </motion.div>
           ))}
         </div>

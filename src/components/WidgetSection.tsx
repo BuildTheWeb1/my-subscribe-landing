@@ -76,13 +76,13 @@ export default function WidgetSection() {
                   : "bg-white/[0.03] border border-white/[0.07]"
               }`}
             >
-              <span className="inline-block bg-gradient-to-r from-[#097CE0] to-[#0938E0] text-white text-xs font-semibold px-3 py-1 rounded-full mb-6">
+              <span className="inline-block bg-gradient-to-r from-[#0870C8] to-[#0938E0] text-white text-xs font-semibold px-3 py-1 rounded-full mb-6">
                 {card.badge}
               </span>
               <h3 className="text-xl font-semibold text-white mb-3">
                 {card.title}
               </h3>
-              <p className="text-white/40 leading-relaxed">{card.description}</p>
+              <p className="text-white/55 leading-relaxed">{card.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -92,7 +92,7 @@ export default function WidgetSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center text-white/30 mt-10 text-sm"
+          className="text-center text-white/50 mt-10 text-sm"
         >
           Widgets update automatically whenever you add or edit a subscription.
         </motion.p>

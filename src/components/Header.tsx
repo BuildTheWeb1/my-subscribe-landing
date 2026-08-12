@@ -16,7 +16,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F]/80 backdrop-blur-md border-b border-white/[0.06]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F]/95 backdrop-blur-md border-b border-white/[0.06]">
       <nav className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
@@ -63,14 +63,16 @@ export default function Header() {
               href="https://apps.apple.com/app/my-subscribe/id6757849924"
               target="_blank"
               rel="noopener noreferrer"
-              className="whitespace-nowrap bg-gradient-to-r from-[#007AFF] to-[#0060DD] text-white text-xs font-bold px-4 py-2 rounded-full shadow-[0_0_10px_rgba(0,122,255,0.35)] hover:opacity-90 transition-opacity"
+              className="whitespace-nowrap bg-gradient-to-r from-[#007AFF] to-[#0060DD] text-white text-xs font-bold px-4 py-2 rounded-full shadow-[0_0_8px_rgba(0,122,255,0.18)] hover:opacity-90 transition-opacity"
             >
               Get App
             </a>
             <button
-              className="p-2 text-white/70 hover:text-white transition-colors"
+              className="flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-white transition-colors"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
+              aria-expanded={isOpen}
+              aria-controls="mobile-nav-menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -81,6 +83,7 @@ export default function Header() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
+              id="mobile-nav-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}

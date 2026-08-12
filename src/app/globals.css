@@ -52,3 +52,11 @@ html {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
 }
+
+/* Keyboard focus visibility — site had zero focus indicators (WCAG 2.4.7) */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #007AFF;
+  outline-offset: 2px;
+}

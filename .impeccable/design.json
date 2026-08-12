@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-12T12:52:53Z",
+  "title": "Design System: MySubscribe",
+  "extensions": {
+    "colorMeta": {
+      "background": { "role": "neutral", "displayName": "Void Black", "canonical": "#0A0A0F", "tonalRamp": ["#050507", "#0A0A0F", "#0D0D14", "#0F1012", "#1a1a2e", "#2B3744", "#4a5568", "#6b7280"] },
+      "surface-alt": { "role": "neutral", "displayName": "Panel Black", "canonical": "#0D0D14", "tonalRamp": ["#050507", "#0A0A0F", "#0D0D14", "#141420", "#1a1a2e", "#2B3744", "#4a5568", "#6b7280"] },
+      "surface-deep": { "role": "neutral", "displayName": "Footer Black", "canonical": "#0F1012", "tonalRamp": ["#08090a", "#0A0A0F", "#0D0D14", "#0F1012", "#17181a", "#2B3744", "#4a5568", "#6b7280"] },
+      "foreground": { "role": "neutral", "displayName": "Pure White", "canonical": "#FFFFFF", "tonalRamp": ["#0A0A0F", "#3f3f46", "#71717a", "#a1a1aa", "#d4d4d8", "#e4e4e7", "#f4f4f5", "#FFFFFF"] },
+      "primary-blue": { "role": "primary", "displayName": "iOS Blue", "canonical": "#007AFF", "tonalRamp": ["#001a33", "#003666", "#00509a", "#006bcc", "#007AFF", "#3396ff", "#66b2ff", "#99ccff"] },
+      "primary-blue-light": { "role": "primary", "displayName": "Cyan Glow", "canonical": "#00D4FF", "tonalRamp": ["#002b33", "#005566", "#008099", "#00aacc", "#00D4FF", "#33ddff", "#66e6ff", "#99efff"] },
+      "primary-blue-hover": { "role": "primary", "displayName": "Hover Blue", "canonical": "#60B4FF", "tonalRamp": ["#001a33", "#003a66", "#1a5fa3", "#3d84cc", "#60B4FF", "#85c5ff", "#a8d6ff", "#cbe8ff"] },
+      "accent-green": { "role": "secondary", "displayName": "Success Green", "canonical": "#34C759", "tonalRamp": ["#0a2913", "#144d24", "#1f7135", "#299546", "#34C759", "#5dd47a", "#87e19d", "#b0edc0"] },
+      "accent-pink": { "role": "secondary", "displayName": "Renewal Pink", "canonical": "#FF2D55", "tonalRamp": ["#330912", "#661224", "#991c36", "#cc2548", "#FF2D55", "#ff5c78", "#ff8a9c", "#ffb9c4"] },
+      "coral": { "role": "secondary", "displayName": "Ledger Coral", "canonical": "#E07868", "tonalRamp": ["#2e1611", "#5c2c22", "#8a4233", "#b85944", "#E07868", "#e8988c", "#f0b8b0", "#f8d8d3"] },
+      "star-gold": { "role": "tertiary", "displayName": "Rating Gold", "canonical": "#FF9500", "tonalRamp": ["#331e00", "#663c00", "#995a00", "#cc7800", "#FF9500", "#ffaa33", "#ffc066", "#ffd699"] },
+      "mint": { "role": "neutral", "displayName": "Mint (reserved, unused)", "canonical": "#DDF7F6", "tonalRamp": ["#173e3c", "#2e7d79", "#45bcb5", "#8ddad6", "#DDF7F6", "#e8faf9", "#f2fcfb", "#fafefe"] },
+      "light-blue": { "role": "neutral", "displayName": "Light Blue (reserved, unused)", "canonical": "#CCEAF7", "tonalRamp": ["#0f3549", "#1e6a93", "#2c9fdc", "#7fc4e9", "#CCEAF7", "#daf0fa", "#e8f6fc", "#f5fbfe"] },
+      "dark-blue-gray": { "role": "neutral", "displayName": "Dark Blue-Gray (reserved, unused)", "canonical": "#2B3744", "tonalRamp": ["#0b0e11", "#161c23", "#212a34", "#2B3744", "#3f4f61", "#5c7189", "#8fa2b5", "#c2cfd9"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1 only." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s across all page sections." },
+      "title": { "displayName": "Title", "purpose": "Card and feature-row H3s." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy; capped to a readable measure via max-w containers." },
+      "label": { "displayName": "Label", "purpose": "Eyebrow tags, pill badges, kicker text." }
+    },
+    "shadows": [
+      { "name": "card-hover-lift", "value": "0 8px 24px rgba(255,255,255,0.05)", "purpose": "Applied on hover to feature cards via the .card-hover utility, paired with a 4px translateY lift." },
+      { "name": "cta-ambient-glow", "value": "0 0 60px rgba(0,122,255,0.08)", "purpose": "Diffuse ambient glow behind the closing CTA panel." },
+      { "name": "pill-glow", "value": "0 0 10px rgba(0,122,255,0.35)", "purpose": "Tight glow on the mobile 'Get App' pill." },
+      { "name": "dot-glow", "value": "0 0 6px #007AFF", "purpose": "Small glow on the hero eyebrow status dot." }
+    ],
+    "motion": [
+      { "name": "fade-up-standard", "value": "opacity 0->1, y 20px->0, duration 0.5s", "purpose": "Default Framer Motion whileInView reveal for section headings and cards site-wide." },
+      { "name": "stagger-children", "value": "staggerChildren 0.1s", "purpose": "Applied to card/grid containers (Features, WidgetSection, RenewalsSection) so items reveal in sequence." },
+      { "name": "press-scale", "value": "whileHover scale 1.05 / whileTap scale 0.95", "purpose": "Applied to App Store badge links and other tappable CTAs." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Get App pill)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Mobile header gradient CTA pill linking to the App Store.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Get App</a>",
+      "css": ".ds-btn-primary { display: inline-block; background: linear-gradient(to right, #007AFF, #0060DD); color: #fff; font-size: 12px; font-weight: 700; padding: 8px 16px; border-radius: 9999px; box-shadow: 0 0 10px rgba(0,122,255,0.35); text-decoration: none; transition: opacity 0.2s; } .ds-btn-primary:hover { opacity: 0.9; } .ds-btn-primary:focus-visible { outline: 2px solid #60B4FF; outline-offset: 2px; }"
+    },
+    {
+      "name": "Pill Badge",
+      "kind": "chip",
+      "refersTo": "pill-badge",
+      "description": "Tinted eyebrow/status tag used for 'iOS App · Free Download', 'Free', 'On-Device', widget-size labels.",
+      "html": "<span class=\"ds-pill\">iOS App &middot; Free Download</span>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,122,255,0.12); border: 1px solid rgba(0,122,255,0.2); color: #60B4FF; font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 9999px; }"
+    },
+    {
+      "name": "Glass Card",
+      "kind": "card",
+      "refersTo": "card-glass",
+      "description": "Default content card: translucent fill, hairline border, hover lift, used for Features and stat cards.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-icon\">&#9679;</div><h3 class=\"ds-card-title\">One place for everything</h3><p class=\"ds-card-body\">Add and manage all your recurring subscriptions in one place.</p></div>",
+      "css": ".ds-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); padding: 32px; border-radius: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s, border-color 0.3s; } .ds-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(255,255,255,0.05); } .ds-card-icon { width: 56px; height: 56px; border-radius: 16px; background: rgba(0,122,255,0.12); display: flex; align-items: center; justify-content: center; color: #007AFF; margin-bottom: 24px; } .ds-card-title { color: #fff; font-size: 20px; font-weight: 600; margin-bottom: 12px; } .ds-card-body { color: rgba(255,255,255,0.4); line-height: 1.6; }"
+    },
+    {
+      "name": "Icon Tile",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Rounded accent-tinted square that frames a lucide-react icon, reused across Features and RenewalsSection.",
+      "html": "<div class=\"ds-icon-tile\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/></svg></div>",
+      "css": ".ds-icon-tile { width: 48px; height: 48px; border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(0,122,255,0.12); color: #007AFF; }"
+    },
+    {
+      "name": "FAQ Accordion Row",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Expand/collapse question row used on the FAQ page and inline FAQ section.",
+      "html": "<div class=\"ds-faq-row\"><button class=\"ds-faq-trigger\"><span>Is it free?</span><svg class=\"ds-faq-chevron\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polyline points=\"6 9 12 15 18 9\"/></svg></button><p class=\"ds-faq-answer\">Yes, completely free.</p></div>",
+      "css": ".ds-faq-row { border-bottom: 1px solid rgba(255,255,255,0.06); } .ds-faq-trigger { width: 100%; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; background: none; border: none; text-align: left; cursor: pointer; } .ds-faq-trigger span { color: #fff; font-size: 18px; font-weight: 500; padding-right: 16px; } .ds-faq-chevron { color: rgba(255,255,255,0.4); flex-shrink: 0; transition: transform 0.2s; } .ds-faq-trigger[aria-expanded=\"true\"] .ds-faq-chevron { transform: rotate(180deg); } .ds-faq-answer { padding-bottom: 24px; color: rgba(255,255,255,0.55); line-height: 1.6; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Fixed, blurred top navigation with desktop links and mobile Get App + hamburger.",
+      "html": "<header class=\"ds-nav\"><nav class=\"ds-nav-inner\"><a class=\"ds-nav-link\" href=\"#\">Home</a><a class=\"ds-nav-link\" href=\"#\">FAQ</a><a class=\"ds-nav-link\" href=\"#\">Privacy</a></nav></header>",
+      "css": ".ds-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(10,10,15,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); } .ds-nav-inner { max-width: 1152px; margin: 0 auto; padding: 16px 24px; display: flex; gap: 32px; } .ds-nav-link { color: rgba(255,255,255,0.5); font-weight: 500; text-decoration: none; transition: color 0.2s; } .ds-nav-link:hover, .ds-nav-link:focus-visible { color: #fff; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Midnight Ledger",
+    "overview": "MySubscribe's landing site is a near-black, iOS-native control room for money you forgot you were spending. The palette borrows directly from iOS system colors (#007AFF blue, #34C759 green, #FF2D55 red/pink) so the site feels like an extension of the app rather than a marketing wrapper around it. Every surface is dark (#0A0A0F to #0D0D14), and structure comes from translucent \"glass\" panels — low-opacity white fills with faint borders and backdrop blur — rather than from shadows or hard edges. Depth is atmospheric: soft color-gradient glows behind phone mockups and CTA panels stand in for elevation.\n\nText hierarchy is carried almost entirely by white opacity steps (white/30 through white/70, plus solid white for headings) instead of a gray palette, which keeps every screen feeling like one continuous dark surface. Section backgrounds alternate between #0A0A0F and #0D0D14 in a two-tone rhythm to separate content blocks without introducing borders or new hues.",
+    "keyCharacteristics": [
+      "iOS system-color palette on a near-black canvas",
+      "Glassmorphic panels (translucent fill + hairline border + blur) instead of shadows for structure",
+      "Opacity-stepped white for the entire text hierarchy — no gray scale",
+      "Two-tone section background rhythm (#0A0A0F / #0D0D14) instead of borders to separate sections",
+      "Soft color-glow halos behind phone mockups and the closing CTA, used sparingly"
+    ],
+    "rules": [
+      { "name": "The Opacity-Not-Gray Rule", "body": "Body and label text is never a separate gray hex — it's always white at a reduced Tailwind opacity step (/30, /40, /45, /50, /55, /60, /70). This keeps every panel visually part of the same dark surface instead of introducing a competing neutral.", "section": "colors" },
+      { "name": "The Narrow-Accent Rule", "body": "Each non-blue accent (green, pink, coral) is scoped to one feature or section and is not reused as a general-purpose color elsewhere on the page.", "section": "colors" },
+      { "name": "The Weight-Over-Size Rule", "body": "Headings jump straight to font-black/font-extrabold; there is no medium-weight heading tier. Emphasis is created by weight and opacity contrast, not by an expanded size scale.", "section": "typography" },
+      { "name": "The Glass-Not-Shadow Rule", "body": "Structural cards (feature cards, stat cards, glass social-proof card, FAQ container) are distinguished from the background by translucency and a hairline border, never by a drop shadow. Shadows are reserved for glow/ambient effects and the single hover-lift state.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep body/label text as white at a Tailwind opacity step (/30–/70) rather than introducing a gray hex.",
+      "Do use translucent glass panels (bg-white/[0.03–0.08] + hairline border + optional backdrop-blur) for card structure instead of drop shadows.",
+      "Do alternate section backgrounds between #0A0A0F and #0D0D14 to create rhythm without adding borders between sections.",
+      "Do scope non-blue accent colors (green, pink, coral) to a single feature/section rather than reusing them site-wide.",
+      "Do pair icon tiles with a ${accentHex}20 (≈12% alpha) background fill so the icon color reads as a tint, not a solid block."
+    ],
+    "donts": [
+      "Don't add hard drop-shadows to resting cards — shadows are reserved for hover-lift and ambient glow effects only (see Elevation & Depth).",
+      "Don't use sharp/0px corners anywhere; the smallest radius in active use is rounded-xl (12px), pills are rounded-full.",
+      "Don't repurpose the reserved Mint / Light Blue / Dark Blue-Gray tokens without first deciding what they represent — they exist in globals.css but nothing currently renders them.",
+      "Don't introduce a new heading weight between the current font-semibold (titles) and font-black/font-extrabold (headlines/display) tiers; the jump is intentional."
+    ]
+  }
+}

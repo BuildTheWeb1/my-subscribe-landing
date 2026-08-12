@@ -105,7 +105,7 @@ export default function Features() {
               <h3 className="text-xl font-semibold text-white mb-3">
                 {feature.title}
               </h3>
-              <p className="text-white/40 leading-relaxed">{feature.description}</p>
+              <p className="text-white/55 leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>

@@ -9,8 +9,9 @@ interface FAQ {
   answer: string;
 }
 
-function FAQItem({ question, answer }: FAQ) {
+function FAQItem({ question, answer, index }: FAQ & { index: number }) {
   const [isOpen, setIsOpen] = useState(false);
+  const panelId = `faq-panel-${index}`;
 
   return (
     <motion.div
@@ -21,6 +22,8 @@ function FAQItem({ question, answer }: FAQ) {
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-controls={panelId}
         className="w-full py-6 flex items-center justify-between text-left"
       >
         <span className="text-lg font-medium text-white pr-4">{question}</span>
@@ -35,13 +38,15 @@ function FAQItem({ question, answer }: FAQ) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id={panelId}
+            role="region"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-white/55 leading-relaxed">{answer}</p>
+            <p className="pb-6 text-white/55 leading-relaxed max-w-[65ch]">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -69,7 +74,7 @@ export default function FAQContent({ faqs }: { faqs: FAQ[] }) {
 
         <div className="bg-[#0D0D14] rounded-2xl border border-white/[0.06] p-6 md:p-8">
           {faqs.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
+            <FAQItem key={index} question={faq.question} answer={faq.answer} index={index} />
           ))}
         </div>
 

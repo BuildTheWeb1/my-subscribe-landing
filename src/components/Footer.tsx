@@ -14,30 +14,29 @@ export default function Footer() {
                 width={40}
                 height={40}
                 className="rounded-full"
-                priority
               />
               <span className="font-bold text-xl">MySubscribe</span>
             </div>
-            <p className="text-gray-400 max-w-sm">
+            <p className="text-white/50 max-w-sm">
               Track every active subscription, from Netflix to niche apps, with an easy card-style layout. See your total monthly and yearly spend at a glance, plus how much you’ve paid in total for each service over time.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Links</h4>
+            <h3 className="font-semibold mb-4">Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/" className="text-white/50 hover:text-white transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/faq" className="text-white/50 hover:text-white transition-colors">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/privacy" className="text-white/50 hover:text-white transition-colors">
                   Privacy Policy
                 </Link>
               </li>
@@ -45,14 +44,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Connect</h4>
+            <h3 className="font-semibold mb-4">Connect</h3>
             <ul className="space-y-2">
               <li>
                 <a 
                   href="https://x.com/buildtheweb1" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -64,7 +63,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <div className="border-t border-white/[0.06] mt-12 pt-8 text-center text-white/50">
           <p>&copy; {new Date().getFullYear()} MySubscribe App. All rights reserved.</p>
         </div>
       </div>

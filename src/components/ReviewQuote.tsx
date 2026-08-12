@@ -18,7 +18,7 @@ export default function ReviewQuote() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="text-xs font-bold text-white/30 uppercase tracking-widest text-center mb-10"
+          className="text-xs font-bold text-white/55 uppercase tracking-widest text-center mb-10"
         >
           What Users Say
         </motion.p>
@@ -38,7 +38,7 @@ export default function ReviewQuote() {
           <p className="text-white/70 text-lg italic leading-relaxed mb-6">
             &ldquo;{review.text}&rdquo;
           </p>
-          <p className="text-white/30 text-sm font-semibold">
+          <p className="text-white/55 text-sm font-semibold">
             — {review.attribution}
           </p>
         </motion.div>

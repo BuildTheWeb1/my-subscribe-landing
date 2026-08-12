@@ -88,7 +88,7 @@ export default function RenewalsSection() {
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {row.title}
                   </h3>
-                  <p className="text-white/40 leading-relaxed">{row.description}</p>
+                  <p className="text-white/55 leading-relaxed">{row.description}</p>
                 </div>
               </motion.div>
             ))}

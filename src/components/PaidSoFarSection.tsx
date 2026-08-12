@@ -35,9 +35,9 @@ export default function PaidSoFarSection() {
 
             {/* Illustrative stat card */}
             <div className="bg-[rgba(232,120,104,0.08)] border border-[rgba(232,120,104,0.15)] rounded-2xl p-6">
-              <p className="text-xs text-white/40 mb-1">Example · Streaming Service A</p>
+              <p className="text-xs text-white/55 mb-1">Example · Streaming Service A</p>
               <p className="text-4xl font-black text-[#E07868] mb-1">$239.76</p>
-              <p className="text-sm text-white/35">
+              <p className="text-sm text-white/55">
                 paid since Jan 2022 &nbsp;·&nbsp; $9.99/mo &nbsp;·&nbsp; used: occasionally
               </p>
             </div>

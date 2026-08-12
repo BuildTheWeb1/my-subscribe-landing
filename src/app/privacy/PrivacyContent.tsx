@@ -15,7 +15,7 @@ export default function PrivacyContent() {
             Privacy Policy
           </h1>
 
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-[65ch]">
             <p className="text-white/45 text-lg mb-8">
               Last updated: January 2026
             </p>
